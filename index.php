@@ -16,8 +16,9 @@
 		<?php foreach($filieres as $f): ?>
 			<option value="<?= $f['id'] ?>"><?= $f['nom'] ?> </option>
 			<?php endforeach; ?>
-		</select><br />
-		<input type="submit" name="btn" value="Ajouter" />
-	</form>
+	</select><br />
+	<input type="submit" name="btn" value="Ajouter" />
+	<script src="assets/js/script.js"></script>
+</form>
 
 
