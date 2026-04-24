@@ -1,22 +1,23 @@
-<?php 
-require 'config.php';
-if(isset($_POST['btn'])){
-	$db->query('INSERT INTO etudiants(nom,prenom,id_filieres) VALUES("'.$_POST['nom'].'","'.$_POST['prenom'].'","'.$_POST['filieres'].'")');
-}
-
+<?php
+	require 'connexion.php';
+	$req = $db->query("SELECT * FROM filieres");
+	$filieres = $req->fetchAll();
 ?>
 
-
-
-<form methode="POST" action="index.php">
-	<input type="name" name="nom" placeholder="nom" /><br />
-	<input type="name" name="prenom" placeholder="prenom" /><br />
-	<select name="filieres">
-		<option value = 'sil'</option>
-		<option value = 'rit'</option>
-		<option value = 'si'</option>
-	</select>
-	<input type submit="submit" name="btn" value="ajout" />
-</form>
+<head>
+	<title>Ajouter étudiant</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<form action="traitement.php" method="POST">
+	<input type="text" name="nom" placeholder="Nom" /><br />
+	<input type="text" name="prenom" placeholder="Prénom" /><br />
+	<select name="filiere_id">
+        	<option value="">Choisir une filière</option>
+		<?php foreach($filieres as $f): ?>
+			<option value="<?= $f['id'] ?>"><?= $f['nom'] ?> </option>
+			<?php endforeach; ?>
+		</select><br />
+		<input type="submit" name="btn" value="Ajouter" />
+	</form>
 
 

@@ -1,1 +1,52 @@
-""
+/* Reset simple */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    height: 100vh;
+
+    /* Centrage parfait */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Formulaire */
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 320px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Champs */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+/* Bouton */
+input[type="submit"] {
+    background: #007bff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+
