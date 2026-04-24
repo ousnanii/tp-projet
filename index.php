@@ -6,7 +6,7 @@
 
 <head>
 	<title>Ajouter étudiant</title>
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <form action="traitement.php" method="POST">
 	<input type="text" name="nom" placeholder="Nom" /><br />
