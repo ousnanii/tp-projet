@@ -1,23 +1,19 @@
-/* Reset simple */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corps de la page */
 body {
     font-family: Arial, sans-serif;
-    background: #f0f2f5;
+    background: white;
     height: 100vh;
 
-    /* Centrage parfait */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Formulaire */
 form {
     background: white;
     padding: 25px;
@@ -27,7 +23,6 @@ form {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Champs */
 input, select {
     width: 100%;
     padding: 10px;
@@ -38,8 +33,6 @@ input, select {
     font-size: 14px;
 }
 
-
-/* Bouton */
 input[type="submit"] {
     background: #007bff;
     color: white;
