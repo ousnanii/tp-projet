@@ -2,6 +2,8 @@
 	require 'config.php';
 	$req = $db->query("SELECT * FROM filieres");
 	$filieres = $req->fetchAll();
+	$req2 = $db->query("SELECT e.*, f.nom AS filiere FROM etudiants e JOIN filieres f ON f.id = e.id_filieres  ");
+	$etudiants = $req2->fetchAll();
 ?>
 
 <head>
@@ -19,7 +21,7 @@
 	</select><br />
 	<input type="submit" name="btn" value="Ajouter" />
 	<script src="assets/js/script.js"></script>
-</form>
+</form><br />
 
 <table border="1" cellpadding="10">
 	<tr>
@@ -32,7 +34,7 @@
 		<tr>
 			<td><?= $e['nom'] ?></td>
 			<td><?= $e['prenom'] ?></td>
-			<td><?= $e['filiere_nom'] ?></td>
+			<td><?= $e['filiere'] ?></td>
 			<td>
 				<a href="update.php?id=<?= $e['id'] ?>">Modifier</a>
 				<a href="delete.php?id=<?= $e['id'] ?>" onclick="return confirmer()">Supprimer</a>

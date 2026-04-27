@@ -1,17 +1,14 @@
-<?php
-require 'config.php';
 
-if(isset($_POST['btn'])){
 
-    $id = $_GET['id'];
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $filiere_id = $_POST['filiere_id'];
+<head>
+	<title>Modifier étudiant</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<form action="update.php" method="POST">
+	<input type="text" name="nom" value= "<?=$etudiant['nom']?>" /><br />
+	<input type="text" name="prenom" value= "<?=$etudiant['prenom']?>" /><br />
 
-    $db->query("UPDATE etudiants 
-                SET nom='$nom', prenom='$prenom', filiere_id='$filiere_id' 
-                WHERE id='$id'");
+	
+	<input type="submit" name="btn" value="Ajouter" />
+</form>
 
-    header("Location: index.php");
-}
-?>
