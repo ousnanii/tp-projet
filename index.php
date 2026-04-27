@@ -36,7 +36,7 @@
 			<td><?= $e['prenom'] ?></td>
 			<td><?= $e['filiere'] ?></td>
 			<td>
-				<a href="update.php?id=<?= $e['id'] ?>">Modifier</a>
+				<a href="update.php?id=<?=$e['id'] ?>">Modifier</a>
 				<a href="delete.php?id=<?= $e['id'] ?>" onclick="return confirmer()">Supprimer</a>
 			</td>
 		</tr>
